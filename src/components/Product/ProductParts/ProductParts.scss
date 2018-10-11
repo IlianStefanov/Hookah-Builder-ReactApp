@@ -1,0 +1,127 @@
+
+
+.Hookah-small {
+    width: 420px;
+    height: 500px;
+    background: url(../images/hookah-2.png) no-repeat center center / cover;
+    border-radius: 50% 50% 0 0;
+    transition: all 0.2s ease-out;
+    margin: 2% 2% 2% auto;
+    position: relative;
+}
+
+.Hookah-mid {
+    width: 420px;
+    height: 500px;
+    background: url(../images/hookah-4.png) no-repeat center center / cover;
+    border-radius: 50% 50% 0 0;
+    transition: all 0.2s ease-out;
+    margin: 2% 2% 2% auto;
+    position: relative;
+}
+.Start-building {
+    width: 420px;
+    height: 500px;
+    background: url(../images/start.png) no-repeat center center / cover;
+    margin: 2% 2% 2% auto;
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+.Hookah-big {
+    width: 420px;
+    height: 500px;
+    background: url(../images/hookah-grey.png) no-repeat center center / cover;
+    margin: 2% 2% 2% auto;
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+.flav {
+    width: 100px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    border-radius: 50%;
+    box-shadow: 1px 7px 42px #999999;
+    transition: all 1s ease-out;
+    animation: $levitate;
+}
+
+
+
+ 
+.flav-1 {
+    background: url(../images/flav-1-frame.jpg) no-repeat center center / cover;
+}
+
+.flav-2 {
+    background: url(../images/flav-2-frame.jpg) no-repeat center center / cover;
+}
+
+.flav-3 {
+    background: url(../images/flav-3-frame.jpg) no-repeat center center / cover;
+}
+.price {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+    position: absolute;
+    top: 3rem;
+    right: 20.5rem;
+    border-radius: 50%;
+    color: white;
+    
+    background: $header-color;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $dark-header, $header-color);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $dark-header, $header-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    box-shadow: 1px 7px 42px #8355e0;
+    animation: do-levitation 1.5s alternate ease-in-out infinite;
+}
+
+
+
+
+
+@media (min-width: 500px) and (min-height: 400px) {
+    .Burger {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 500px) and (min-height: 401px) {
+    .Burger {
+        width: 450px;
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 870px)  {
+    .flav-popup  {
+        bottom: 15rem;
+        right: 3rem;
+        top: unset;
+        width: 150px;
+        height: 150px;
+    }
+    .price {
+        bottom: 25rem;
+        top: unset;
+        left: 7rem;
+    }
+
+
+    .Product-wrapper {
+        .product-display {
+            margin: 0 auto;
+        }
+    }
+}

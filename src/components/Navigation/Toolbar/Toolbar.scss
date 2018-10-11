@@ -1,0 +1,364 @@
+.Toolbar-element {
+    z-index: 99;
+    width: 100%;
+    height: 84px;
+    position: fixed;
+    display: block;
+    background: transparent;
+    transition: all 0.2s ease-in;
+    .Toolbar {
+        max-width: 960px;
+        height: auto;
+        margin: 0 auto;
+        position: fixed;
+        right: 0;
+        left: 0;
+        padding: 30px auto;
+        z-index: 2;
+        
+        .Logo {
+            width: 50%;
+            display: block;
+            padding: 30px 0px;
+            text-align: left;
+            background-image: url('../images/logo.png');
+            background-position-x: 0;
+            background-position-y: 53%;
+            background-size: 140px auto;
+            background-repeat: no-repeat;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+            float: left;
+            padding: 42px 0;
+        }
+        .Menu-Wrapper {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: blueviolet;
+            transition: all 0.6s ease-in;
+            .Menu-Mobile-active {
+                border: 0px;
+                margin: 0 0 0 auto;
+                list-style-type: none;
+                position: absolute;
+                padding: 0 0px;
+                display: block;
+                text-align: right;
+                width: 50%;
+                max-width: 960px;
+                font-size: 14px;
+                font-family: "Open Sans", sans-serif;
+                font-weight: bold;
+                right: 0;
+                display: none;
+                z-index: 50;
+        
+            }
+        }
+        
+        .Menu-Mobile {
+            border: 0px;
+            margin: 0 0 0 auto;
+            list-style-type: none;
+            position: absolute;
+            padding: 0 0px;
+            display: block;
+            text-align: right;
+            width: 50%;
+            max-width: 960px;
+            font-size: 14px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            right: 0;
+            display: none;
+        }
+        .wrapper-menu {
+            width: 30px;
+            height: 30px;
+    
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            display: inline-flex;
+            transition: transform 330ms ease-out;
+            float: right;
+            transition: transform 330ms ease-out;
+            transition: all 0.5s ease-out;
+            padding: 30px 0;
+            display: none;
+            z-index: 9999;
+            .line-menu {
+                background-color: #fff;
+                border-radius: 5px;
+                width: 100%;
+                height: 2px;
+                
+            }
+            .half {
+                width: 50%;
+            }
+            .start {
+                transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                transform-origin: right;
+            }
+            .end {
+                align-self: flex-end;
+                transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                transform-origin: left;
+            }
+        }
+        .App-menu {
+            .register {
+                border: 2px solid white;
+                padding: 0.5rem 2rem;
+                border-radius: 50px;
+            }
+        }
+        .open {
+            transform: rotate(-45deg);  
+            .start {
+                transform: rotate(-90deg) translateX(2px);
+            }
+            .end {
+                transform: rotate(-90deg) translateX(-2px);
+            }
+        }
+    }
+ 
+}
+.Toolbar-element-onscroll {
+    z-index: 99;
+    width: 100%;
+    height: 84px;
+    position: fixed;
+    display: block;
+    background: transparent;
+    transition: all 0.2s ease-in;
+    .Toolbar {
+        max-width: 960px;
+        height: auto;
+        margin: 0 auto;
+        position: fixed;
+        right: 0;
+        left: 0;
+        padding: 30px auto;
+        z-index: 2;
+        
+        .Logo {
+            width: 50%;
+            display: block;
+            padding: 30px 0px;
+            text-align: left;
+            background-image: url('../images/logo-onscroll.png');
+            background-position-x: 0;
+            background-position-y: 53%;
+            background-size: 140px auto;
+            background-repeat: no-repeat;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+            float: left;
+            padding: 42px 0;
+        }
+        .Menu-Wrapper {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: blueviolet;
+            transition: all 0.6s ease-in;
+            .Menu-Mobile-active {
+                border: 0px;
+                margin: 0 0 0 auto;
+                list-style-type: none;
+                position: absolute;
+                padding: 0 0px;
+                display: block;
+                text-align: right;
+                width: 50%;
+                max-width: 960px;
+                font-size: 14px;
+                font-family: "Open Sans", sans-serif;
+                font-weight: bold;
+                right: 0;
+                display: none;
+                z-index: 50;
+        
+            }
+        }
+        // .Menu-Wrapper-Inactive {
+        //     width: 100%;
+        //     height: 100vh;
+        //     position: fixed;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     transition: all 0.6s ease-in;
+        // }
+        .Menu-Mobile {
+            border: 0px;
+            margin: 0 0 0 auto;
+            list-style-type: none;
+            position: absolute;
+            padding: 0 0px;
+            display: block;
+            text-align: right;
+            width: 50%;
+            max-width: 960px;
+            font-size: 14px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            right: 0;
+            display: none;
+        }
+        .wrapper-menu {
+            width: 30px;
+            height: 30px;
+    
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            display: inline-flex;
+            transition: transform 330ms ease-out;
+            float: right;
+            transition: transform 330ms ease-out;
+            transition: all 0.5s ease-out;
+            padding: 30px 0;
+            display: none;
+            z-index: 9999;
+            .line-menu {
+                background-color: #fff;
+                border-radius: 5px;
+                width: 100%;
+                height: 2px;
+                
+            }
+            .half {
+                width: 50%;
+            }
+            .start {
+                transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                transform-origin: right;
+            }
+            .end {
+                align-self: flex-end;
+                transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                transform-origin: left;
+            }
+        }
+        .App-menu {
+            li {
+                color: $dark-header !important;
+            }
+        }
+        .App-menu {
+            .register {
+                color: white !important;
+                background-color: $dark-header;
+                border-radius: 50px;
+                padding: 0.5rem 2rem;
+                border: 2px solid $dark-header;
+            }
+        }
+        .open {
+            transform: rotate(-45deg);  
+            .start {
+                transform: rotate(-90deg) translateX(2px);
+            }
+            
+            .end {
+                transform: rotate(-90deg) translateX(-2px);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .Toolbar-element {
+   
+        width: 100%;
+        height: 84px;
+        position: fixed;
+        display: block;
+        background: transparent;
+        transition: all 0.2s ease-in;
+        .Toolbar {
+            width: 80%;
+            z-index: 2;
+            .Menu-Mobile {
+                margin: 30px 0;
+                
+            }
+            .Menu-Mobile-active {
+                margin: 30px 0;
+                
+                z-index: 50;
+            }
+            .wrapper-menu {
+                display: inline-flex !important;
+                margin: 0;
+                position: absolute;
+                right: 0;
+                z-index: 9999;
+            }
+            .open {
+                right: 10%;
+            }
+        }
+    }
+    .Toolbar-element-onscroll {
+
+        width: 100%;
+        height: 84px;
+        position: fixed;
+        display: block;
+        background: white;
+        // border-bottom: 2px solid $dark-header;
+        transition: all 0.2s ease-in;
+        .Toolbar {
+            width: 80%;
+            
+            .Logo {
+                background-image: url('../images/logo-onscroll.png');
+            }
+            .Menu-Mobile {
+                margin: 30px 0;   
+            }
+            .Menu-Mobile-active {
+                margin: 30px 0;
+                
+                z-index: 50;
+            }
+            .wrapper-menu {
+                display: inline-flex !important;
+                margin: 0;
+                position: relative;
+                right: 0;
+                z-index: 9999;
+                .line-menu {
+                    background-color: $dark-header; 
+                }
+            }
+            .open {
+                right: 10%;
+                .line-menu {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,299 @@
+
+@import '../scss/customizations-config.scss';
+@import '../scss/layout.scss';
+@import '../components/Product/Product.scss';
+@import '../components/Product/ProductParts/ProductParts.scss';
+@import '../components/Product/BuildControls/BuildControls.scss';
+@import '../components/Product/BuildControls/BuildControlType/BuildControl.scss';
+@import '../components/UI/Modal/Modal.scss';
+@import '../components/UI/Backdrop/Backdrop.scss';
+@import '../components/Product/OrderSummary/OrderSummary.scss';
+@import '../components/Navigation/Toolbar/Toolbar.scss';
+
+
+
+
+
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-style-base;
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+//App's header css
+.App {
+  text-align: center;
+  .App-header {
+    // background-color: #222;
+    background: url(../images/headerBcg.png) no-repeat center 100% / cover;
+    height: 100vh;
+    padding: 0 0px 0 0px;
+    color: white;
+    width: 100%;
+    z-index: 98;
+
+    .Toolbar-element {
+       background: transparent;
+    }
+    .Toolbar-element-onscroll {
+      background: white;
+    }
+    //PLUS SYMBOLS
+    .App-plus1 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      animation: App-logo-spin-and-bounce infinite 20s linear;
+      width: 48%;
+      opacity: 0.3;
+      height: 50%;
+    }
+    .App-plus2 {
+      opacity: 0.3;
+      position: absolute;
+      top: 15%;
+      right: 50%;
+      animation: App-logo-spin-and-bounce infinite 20s linear;
+    }
+    .App-plus3 {
+      opacity: 0.3;
+      position: absolute;
+      top: 49%;
+      left: 45%;
+      animation: App-logo-spin-and-bounce infinite 20s linear;
+    }
+    .App-plus4 {
+      opacity: 0.3;
+      position: absolute;
+      top: 25%;
+      left: 20%;
+      animation: App-logo-spin-and-bounce infinite 20s linear;
+    }
+    .App-plus5 {
+      opacity: 0.3;
+      position: absolute;
+      top: 28%;
+      right: 30%;
+      animation: App-logo-spin-and-bounce infinite 20s linear;
+    }
+
+   
+    @keyframes App-logo-spin-and-bounce {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .App-menu {
+      border: 0px;
+      margin: auto;
+      list-style-type: none;
+      position: relative;
+      padding: 0px 0px;
+      display: flex;
+      text-align: right;
+      width: 50%;
+      max-width: 960px;
+      font-size: $font-size-base;
+      font-family: $font-style-base;
+      font-weight: bold;
+      height: 84px;
+      align-items: center;
+      font-weight: bold;
+    
+
+      li {
+        display: inline-block;
+        margin: 0 0 0 2em;
+        color: white;
+      }
+
+      
+    }
+    .App-menu-active {
+      list-style-type: none;
+      width: 100%;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      position: absolute;
+
+      z-index: 10;
+      margin: 0;
+      height: 100%;
+      padding: 0;
+      display: inline-grid;
+      margin: auto;
+      max-height: 420px;
+    
+      align-items: center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      justify-content: center;
+      height: max-content;
+        
+
+      li {
+        width: 67%;
+        display: inline-block;
+        padding: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin: auto;
+      }
+    }
+
+    //Header content like first scroll message + CTAs
+    .App-header-content {
+      width: 80%;
+     
+      position: relative;
+      justify-content: center;
+      margin: auto;
+      max-width: 960px;
+      text-align: left;
+   
+      position: absolute;
+      height: 41%;
+      display: inline-block;
+      top: 0px;
+      bottom: 0px;
+      z-index: 1;
+      right: 0;
+      left: 0;
+      
+      .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+        height: 80px;
+      }
+      .App-title {
+        position: relative;
+        font-size: 2em;
+        width: 100%;
+        line-height: 1.5em;
+        margin: 0px auto;
+      }
+      .App-cta {
+        display: block;
+        position: relative;
+        width: 155px;
+        height: 100%;
+        border-radius: 50px;
+        padding: 4px 22px;
+        background-color: white;
+        border: 6px solid rgba(255,255,255,0.1);
+        color: $dark-header;
+        font-weight: bold;
+        box-shadow: 1px 1px 42px #300884;
+        font-family: $font-style-base;
+        max-height: 42px;
+        margin: 5% 0;
+      }
+      
+
+
+      // logo spin keyframe 
+      @keyframes App-logo-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      
+    }
+  }
+
+  .App-home {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    max-width: $max-width;
+   
+    .Product-builder {
+
+      margin: 5% auto;
+      font-family: $font-style-base;
+      font-size: 30px;
+      font-weight: bold;
+      color: #c8c8c8;
+      text-align: left;
+      margin: 1rem auto;
+      padding: 0 1rem;
+      font-size: $font-size-huge;
+    }
+    .App-intro {
+      font-size: large;
+    }
+    .App-test {
+      color: red;
+    }
+  }
+}
+  
+
+@media (max-width: 550px) {
+  .App {
+    .App-header {
+      background: url('../images/headerBcg.png') top center;
+    }
+    .App-home {
+      .Product-builder {
+        
+        width: 80%;
+        margin: 0 auto;
+        padding: 0px !important;
+        text-align: left;
+      }
+    }
+  }
+}
+  
+  
+@media (max-width: 870px) {
+  .App {
+    .App-header {
+      background: url('../images/headerBcg.png') no-repeat 7% top/cover
+    }
+    .App-home {
+      .Product-builder {
+        padding: 0 0 0 2rem;
+        margin: 1rem auto !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .App {
+    .App-header {
+      .App-menu {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+    }
+    .App-home {
+      .Product-builder {
+        width: 80%;
+        padding: 0 0 0 1rem;
+        margin: 1rem 0 1rem 0;
+      }
+    }
+  }
+}
+
+  
+
+

@@ -1,0 +1,344 @@
+.BuildControls {
+    width: 50%;
+    margin: 0 auto 0 0;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    float: left;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .BuildControl {
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        font-family: inherit;
+        margin: 0 auto;
+        width: 100%;
+        .BuildControl-label {
+            color: $dark-header;
+        }
+        
+    
+        .modal-form {
+            hr {
+                margin: 1rem;
+                border:1px double #f1f1f1;
+            }
+            .BuildControl-btn-add {
+                display: inline-block;
+                margin: 20px;
+                font-family: $font-style-base;
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: 0.07em;
+                border: 0px;
+                line-height: 24px;
+                color: #ffffff;
+                position: relative;
+                padding: 0px;
+                border-radius: $border-radius;
+                background: white;
+                
+                &.bg-gradient1 {
+                    text-shadow: 0px 0px 1px black;
+                }
+                
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    height: 30px;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 10px;
+                    right: 10px;
+                    z-index: -1;
+                    border-radius: 2em;
+                    filter: blur(14px) brightness(0.9);
+                    transform-style: preserve-3d;
+                    transition: all 0.3s ease-out;
+                }
+                i {
+                    margin-top: -2px;
+                    font-size: 1.265em;
+                    vertical-align: middle;
+                    background: url('../images/plus.png') no-repeat center center;
+                    display: flex;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: 14px;
+                    left: 30px;
+                    z-index: 9;
+                }
+                span {
+                    display: inline-block;
+                    padding: 10px 40px 10px 60px;
+                    border-radius: 50em;
+                    position: relative;
+                    z-index: 2;
+                    will-change: transform, filter;
+                    transform-style: preserve-3d;
+                    transition: all 0.3s ease-out;
+                    
+                }
+                &:focus{
+                    color: #ffffff;
+                }
+                &:hover {
+                    color: #ffffff;
+                    
+                    span {
+                        filter: brightness(.9) contrast(1.2);
+                        transform: scale(0.96);
+                    }
+                    &:before {
+                        bottom: 3px;
+                        filter: blur(6px) brightness(0.8);
+                    }
+                }
+                &:active span {
+                        filter: brightness(.75) contrast(1.7);
+                    }
+                &.pop-onhover {
+                    span {
+                        border-radius: $border-radius;
+                    }
+                    &:before {
+                        opacity: 0;
+                        bottom: 10px;
+                    }
+                    &:hover {
+                        &:before {
+                            bottom: 0px;
+                            opacity: 1;
+                            filter: blur(12px);
+                        }
+                        span {
+                            // transform: scale(1.03);
+                            transform: scale(1);
+                        }
+                        &:active {
+                            span {
+                                filter: brightness(1) contrast(1);
+                                transform: scale(1);
+                                transition: all 0.2s ease-out;
+                            }
+                            &:before {
+                                bottom: 0;
+                                filter: blur(5px) brightness(0.85);
+                                transition: all 0.2s ease-out;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+            /* fancy Button */
+            .BuildControl-btn-remove {
+                display: inline-block;
+                margin: 20px;
+                font-family: $font-style-base;
+                font-weight: 600;
+                font-size: 16px;
+                letter-spacing: 0.07em;
+                border: 0px;
+                line-height: 24px;
+                color: $dark-header;
+                position: relative;
+                padding: 0px;
+                border-radius: $border-radius;
+                background: white;
+                border: 2px solid $dark-header;
+                will-change: transform, filter;
+                transform-style: preserve-3d;
+                transition: all 0.3s ease-out;
+                
+                span {
+                    display: inline-block;
+                    padding: 10px 40px;
+                    border-radius: 50em;
+                    position: relative;
+                    z-index: 2;
+                    will-change: transform, filter;
+                    transform-style: preserve-3d;
+                    transition: all 0.3s ease-out;
+                    
+                }
+                &:focus{
+                    color: $dark-header;
+                }
+                &:hover {
+                    color: $dark-header;
+                    filter: brightness(.9) contrast(1.2);
+                        transform: scale(0.96);
+                    span {
+                        filter: brightness(.9) contrast(1.2);
+                        transform: scale(0.96);
+                    }
+                    &:before {
+                        bottom: 3px;
+                        filter: blur(6px) brightness(0.8);
+                    }
+                }
+                &:active span {
+                        filter: brightness(.75) contrast(1.7);
+                    }
+                    
+                
+            }
+            .BuildControlType {
+                background-color: black;
+            }
+            .choose-type {
+                width: 50%;
+                display: block;
+                margin: 0;
+                padding: 1rem;
+                text-align: left;
+                font-family: inherit;
+                color: #777777
+                
+            }
+            .choose-flavour {
+                width: 50%;
+                display: block;
+                margin: 0;
+                padding: 1rem;
+                text-align: left;
+                font-family: inherit;
+                color: #777777
+            }
+            .flav-btn {
+                width: 31%;
+                height: 11rem;
+                margin: 1%;
+                border: 0px;
+                
+                transform: scale(0.9);
+                transition: all 0.3s ease-out;
+                opacity: 0.6;
+                color: rgba(255,255,255, 0);
+                &:hover {
+                    
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                }
+                &:focus {
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                    outline:none;
+                }
+                &:active {
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                    outline:none;
+                }
+            }
+            .prod-btn-flav-1 {
+                background: url('../images/flav-1.jpg') no-repeat center center / cover;
+            }
+            .prod-btn-flav-2 {
+                background: url('../images/flav-2.jpg') no-repeat center center / cover;
+            }
+            .prod-btn-flav-3 {
+                background: url('../images/flav-3.jpg') no-repeat center center / cover;
+            }
+            .prod {
+                width: 31%;
+                height: 5rem;
+                margin: 1%;
+                border: 0px;
+                filter: grayscale(1);
+                transform: scale(0.9);
+                transition: all 0.3s ease-out;
+                opacity: 0.6;
+                color: rgba(255,255,255, 0);
+                &:hover {
+                    transform: scale(1);
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                }
+                &:focus {
+                    transform: scale(1);
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                    outline:none;
+                }
+                &:active {
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                    outline:none;
+                }
+            }
+            .active {
+                transform: scale(1);
+                filter: grayscale(0);
+                opacity: 1;
+                cursor: pointer;
+                animation: $levitate;
+            }
+            .prod-btn-smallHookah {
+                background: url('../images/smallNarga.jpg') no-repeat center center / cover;
+            }
+            .prod-btn-bigHookah {
+               background: url('../images/bigNarga.jpg') no-repeat center center / cover;
+            }
+            .prod-btn-midHookah {
+               background: url('../images/midNarga.jpg') no-repeat center center / cover;
+            }
+    }
+}
+
+@media (min-width: 500px) and (min-height: 400px) {
+    
+}
+
+@media (min-width: 500px) and (min-height: 401px) {
+    
+}
+
+@media (max-width: 550px) {
+    .BuildControls  {
+        height: auto;
+        .BuildControl {
+            .prod {
+                width: 80%;
+                height: 7rem;
+                max-width: 220px;
+            }
+            .modal-form {
+                hr {
+                    margin: 0rem;
+                }
+                .flav-btn {
+                    width: 70%;
+                    height: 7rem;
+                    background-position: 0 0rem !important;
+                    // max-width: 390px;
+                    min-width: 280px;
+                    animation: unset;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .BuildControls  {
+        width: 80%;
+        margin: 0 auto;
+        float: none;
+    }
+}
